@@ -7,7 +7,8 @@ namespace TechReturners.Exercises
     {
         public static String CapitalizeWord(String word) 
         {
-            // Add your code here!
+              return word.charAt(0).toUpperCase() + word.slice(1);
+            
             throw new NotImplementedException();
         }
 
