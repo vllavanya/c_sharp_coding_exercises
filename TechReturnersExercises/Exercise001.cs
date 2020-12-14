@@ -1,39 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TechReturners.Exercises
 {
     public class Exercise001
     {
-        public static String CapitalizeWord(String word) 
+        public static String CapitalizeWord(String word)
         {
-              return word.charAt(0).toUpperCase() + word.slice(1);
+            return char.ToUpper(word[0]) + word.Substring(1);
+        }
+
+        public static String GenerateInitials(String firstName, String lastName)
+        {
+            return char.ToUpper(firstName[0]) + "." + char.ToUpper(lastName[0]);
             
-            throw new NotImplementedException();
         }
 
-        public static String GenerateInitials(String firstName, String lastName) 
+        public static double AddVat(double originalPrice, double vatRate)
         {
-            // Add your code here!
-            throw new NotImplementedException();
+            return Math.Round(((originalPrice * vatRate) / 100) + originalPrice, 2);
+            
         }
 
-        public static double AddVat(double originalPrice, double vatRate) 
+        public static String Reverse(String sentence)
         {
-            // Add your code here!
-            throw new NotImplementedException();
+            return string.Join(" ", sentence.Split(' ').Reverse().Select(abc => new String(abc.Reverse().ToArray())));
+            
         }
 
-        public static String Reverse(String sentence) 
+        public static int CountLinuxUsers(List<User> users)
         {
-            // Add your code here!
-            throw new NotImplementedException();
+            return users.Count(abc => abc.Type == "Linux");
+            
         }
-
-        public static int CountLinuxUsers(List<User> users) 
-        {
-            // Add your code here!
-            throw new NotImplementedException();
-        }
+        
     }
 }
