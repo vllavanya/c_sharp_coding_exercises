@@ -7,7 +7,7 @@ namespace TechReturners.Exercises
     {
         public static bool IsFromManchester(Person person)
         {
-            return person.City == "Manchester";
+            return person.Place == "Manchester";
             
         }
 
@@ -19,11 +19,11 @@ namespace TechReturners.Exercises
     }
     public class Person
     {
-        public Person(string username, string lastname, string city, int age)
+        public Person(string username, string lastname, string place, int age)
         {
             FirstName = username;
             LastName = lastname;
-            City = city;
+            Place = place;
             Age = age;
         }
 
@@ -32,7 +32,7 @@ namespace TechReturners.Exercises
         public string LastName
         { get; set; }
 
-        public string City
+        public string Place
         { get; set; }
         public int Age
         { get; set; }

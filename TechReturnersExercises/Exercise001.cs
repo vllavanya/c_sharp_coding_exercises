@@ -25,13 +25,13 @@ namespace TechReturners.Exercises
 
         public static String Reverse(String sentence)
         {
-            return string.Join(" ", sentence.Split(' ').Reverse().Select(abc => new String(abc.Reverse().ToArray())));
+            return string.Join(" ", sentence.Split(' ').Reverse().Select(x => new String(x.Reverse().ToArray())));
             
         }
 
         public static int CountLinuxUsers(List<User> users)
         {
-            return users.Count(abc => abc.Type == "Linux");
+            return users.Count(x => x.Type == "Linux");
             
         }
         
